@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion';
-import Spline from '@splinetool/react-spline';
 
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] w-full overflow-hidden bg-[#0b0b0e] text-white">
-      {/* 3D Spline Scene as full-width interactive cover */}
+      {/* Background GIF cover */}
       <div className="absolute inset-0">
-        <Spline
-          scene="https://prod.spline.design/NoYj4XN8s0IlixJM/scene.splinecode"
-          style={{ width: '100%', height: '100%' }}
+        <img
+          src="https://media.giphy.com/media/l0HUpt2s9Pclgt9Vm/giphy.gif"
+          alt="Futuristic tunnel animation"
+          className="h-full w-full object-cover opacity-70"
         />
       </div>
 
