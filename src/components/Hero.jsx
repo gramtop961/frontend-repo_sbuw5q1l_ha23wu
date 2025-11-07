@@ -1,15 +1,17 @@
 import { motion } from 'framer-motion';
-import Spline from '@splinetool/react-spline';
 
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] w-full overflow-hidden bg-[#0b0b0e] text-white">
-      {/* 3D Scene as full-width cover */}
+      {/* Background GIF as full-width cover */}
       <div className="absolute inset-0">
-        <Spline
-          scene="https://prod.spline.design/NoYj4XN8s0IlixJM/scene.splinecode"
-          style={{ width: '100%', height: '100%' }}
+        <img
+          src="https://media.giphy.com/media/l0HlQ7LRal5jv7uE0/giphy.gif"
+          alt="Ambient motion background"
+          className="h-full w-full object-cover opacity-40"
+          aria-hidden
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
       </div>
 
       {/* Glow gradients - don't block interaction */}
