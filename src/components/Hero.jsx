@@ -4,9 +4,21 @@ import Spline from '@splinetool/react-spline';
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] w-full overflow-hidden bg-[#0b0b0e] text-white">
-      {/* 3D Scene */}
+      {/* Background GIF layer */}
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/sbnqZNZdJSLK7U2A/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <img
+          src="https://cdn.eightlabs.ca/cdn/Hailuo_Video_A-sleek-black-Cadillac-SUV-dri_4432988174745681971-ezgif.com-video-to-gif-converter.gif"
+          alt="Futuristic tunnel drive"
+          className="h-full w-full object-cover opacity-40"
+        />
+      </div>
+
+      {/* 3D Scene as full-width cover */}
+      <div className="absolute inset-0">
+        <Spline
+          scene="https://prod.spline.design/NoYj4XN8s0IlixJM/scene.splinecode"
+          style={{ width: '100%', height: '100%' }}
+        />
       </div>
 
       {/* Glow gradients - don't block interaction */}
