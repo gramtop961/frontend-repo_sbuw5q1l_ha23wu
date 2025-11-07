@@ -7,9 +7,9 @@ export default function Hero() {
     <section className="relative isolate flex min-h-[90vh] items-center overflow-hidden bg-[#0b0b0e] pt-16">
       {/* Spline Background Cover */}
       <div className="absolute inset-0 z-0">
-        <Spline scene="https://prod.spline.design/4Tf9WOIaWs6LOezG/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline scene="https://prod.spline.design/NoYj4XN8s0IlixJM/scene.splinecode" style={{ width: '100%', height: '100%' }} />
         {/* Subtle dark gradient for contrast – non-blocking */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
       </div>
 
       {/* Gold glow accents (non-interactive) */}
