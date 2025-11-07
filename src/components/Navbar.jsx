@@ -1,48 +1,27 @@
-import { motion } from 'framer-motion';
+import React from 'react';
+import { Car, Phone } from 'lucide-react';
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <motion.a
-            href="#"
-            className="flex items-center gap-3"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <img
-              src="https://chauffeurduroi.com/assets/e39b3ae5-cff9-4ffd-963c-59fa1b204bf9_1759371059607-DL4VNu0t.png"
-              alt="Chauffeur Du Roi Logo"
-              className="h-9 w-auto drop-shadow-[0_0_20px_rgba(234,179,8,0.35)]"
-            />
-            <span className="text-lg font-semibold tracking-wide bg-gradient-to-r from-yellow-300 via-amber-300 to-yellow-500 bg-clip-text text-transparent">
-              Chauffeur Du Roi
-            </span>
-          </motion.a>
-
-          <motion.nav
-            className="hidden md:flex items-center gap-8 text-sm text-white/80"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <a href="#services" className="hover:text-yellow-300 transition">Services</a>
-            <a href="#fleet" className="hover:text-yellow-300 transition">Fleet</a>
-            <a href="#contact" className="hover:text-yellow-300 transition">Contact</a>
-          </motion.nav>
-
-          <motion.a
-            href="#contact"
-            className="inline-flex items-center rounded-full border border-yellow-400/40 bg-gradient-to-br from-yellow-400/20 via-amber-300/10 to-yellow-500/20 px-4 py-2 text-sm font-medium text-yellow-200 shadow-[0_0_20px_rgba(234,179,8,0.25)] hover:shadow-[0_0_35px_rgba(234,179,8,0.45)] transition"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-          >
-            Book Now
-          </motion.a>
+    <header className="fixed inset-x-0 top-0 z-50 bg-black/30 backdrop-blur supports-[backdrop-filter]:bg-black/30">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-2">
+          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 to-yellow-500 text-black shadow-lg">
+            <Car className="h-5 w-5" />
+          </div>
+          <span className="font-semibold tracking-wide text-white">Chauffeur Du Roi</span>
         </div>
+        <nav className="hidden items-center gap-6 md:flex">
+          <a href="#services" className="text-sm text-white/80 transition hover:text-white">Services</a>
+          <a href="#fleet" className="text-sm text-white/80 transition hover:text-white">Fleet</a>
+          <a href="#about" className="text-sm text-white/80 transition hover:text-white">About</a>
+        </nav>
+        <a
+          href="#book"
+          className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-2 text-sm font-medium text-amber-300 shadow-[0_0_30px_-10px_rgba(251,191,36,0.8)] transition hover:bg-amber-400/20"
+        >
+          <Phone className="h-4 w-4" /> Book Now
+        </a>
       </div>
     </header>
   );

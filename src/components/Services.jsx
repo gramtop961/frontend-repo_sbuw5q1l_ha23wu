@@ -1,60 +1,50 @@
-import { motion } from 'framer-motion';
-import { Crown, Shield, Clock } from 'lucide-react';
+import React from 'react';
+import { Shield, Clock, MapPin } from 'lucide-react';
 
-const services = [
-  {
-    icon: Crown,
-    title: 'Executive Transfers',
-    desc: 'Discreet door-to-door service for business and VIP travel with immaculate vehicles.'
-  },
+const features = [
   {
     icon: Shield,
-    title: 'Event & Wedding Chauffeurs',
-    desc: 'Arrive in style for weddings, galas, and red carpet occasions with white-glove service.'
+    title: 'Executive Safety',
+    desc: 'Professionally trained chauffeurs, vetted routes, and discreet service for peace of mind.'
   },
   {
     icon: Clock,
-    title: 'Hourly & Long Distance',
-    desc: 'Flexible bookings by the hour or long-range journeys with absolute comfort.'
+    title: 'On-Time Precision',
+    desc: 'Proactive dispatching and real-time tracking to ensure you arrive when you intend to.'
+  },
+  {
+    icon: MapPin,
+    title: 'Anywhere You Need',
+    desc: 'Airport transfers, business travel, events, and bespoke itineraries—handled end-to-end.'
   }
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 bg-black text-white">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-10 top-10 h-40 w-40 rounded-full bg-yellow-400/10 blur-3xl" />
-        <div className="absolute right-20 bottom-10 h-40 w-40 rounded-full bg-amber-500/10 blur-3xl" />
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-6">
-        <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6 }}
-        >
-          Our Signature Services
-        </motion.h2>
+    <section id="services" className="relative bg-[#0b0b0e] py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <span className="bg-gradient-to-br from-amber-200 via-yellow-300 to-amber-400 bg-clip-text text-transparent">Our Services</span>
+          </h2>
+          <p className="mt-3 text-white/70">
+            A premium black car experience engineered for executives, creators, and connoisseurs.
+          </p>
+        </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
-            <motion.div
-              key={s.title}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/0 p-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
+          {features.map(({ icon: Icon, title, desc }) => (
+            <div
+              key={title}
+              className="group relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 p-6 shadow-xl ring-1 ring-white/10 transition hover:-translate-y-0.5 hover:bg-white/[0.07]"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-400/15 border border-yellow-400/30 text-yellow-200 shadow-[0_0_25px_rgba(234,179,8,0.25)]">
-                <s.icon className="h-6 w-6" />
+              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-amber-300 to-yellow-500 text-black shadow-lg">
+                <Icon className="h-5 w-5" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold">{s.title}</h3>
-              <p className="mt-2 text-white/70 text-sm">{s.desc}</p>
-              <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-yellow-400/10 blur-3xl transition opacity-0 group-hover:opacity-100" />
-            </motion.div>
+              <h3 className="text-lg font-semibold text-white">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/75">{desc}</p>
+              <div className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-yellow-500/10 blur-2xl transition-opacity group-hover:opacity-100" />
+            </div>
           ))}
         </div>
       </div>

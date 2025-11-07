@@ -1,49 +1,24 @@
-import { motion } from 'framer-motion';
+import React from 'react';
 
 export default function CTA() {
   return (
-    <section id="contact" className="relative py-24 bg-[#0b0b0e] text-white">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/60 to-transparent" />
-      </div>
-
-      <div className="relative mx-auto max-w-4xl px-6 text-center">
-        <motion.h3
-          className="text-3xl sm:text-4xl font-bold"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          Travel Like Royalty
-        </motion.h3>
-        <motion.p
-          className="mt-3 text-white/75"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          Tell us your pickup, destination, and schedule — we’ll handle the rest with precision and class.
-        </motion.p>
-
-        <motion.form
-          className="mt-8 grid gap-4 sm:grid-cols-2"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <input type="text" placeholder="Full Name" className="w-full rounded-xl bg-white/5 px-4 py-3 text-white placeholder-white/50 border border-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400/40" />
-          <input type="email" placeholder="Email" className="w-full rounded-xl bg-white/5 px-4 py-3 text-white placeholder-white/50 border border-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400/40" />
-          <input type="text" placeholder="Pickup Location" className="w-full rounded-xl bg-white/5 px-4 py-3 text-white placeholder-white/50 border border-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400/40" />
-          <input type="text" placeholder="Destination" className="w-full rounded-xl bg-white/5 px-4 py-3 text-white placeholder-white/50 border border-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400/40" />
-          <textarea placeholder="Notes (date, time, special requests)" className="sm:col-span-2 min-h-[120px] w-full rounded-xl bg-white/5 px-4 py-3 text-white placeholder-white/50 border border-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400/40" />
-          <button className="sm:col-span-2 inline-flex items-center justify-center rounded-full border border-yellow-400/50 bg-gradient-to-br from-yellow-400/30 via-amber-300/20 to-yellow-500/30 px-6 py-3 text-sm font-semibold text-yellow-100 shadow-[0_0_25px_rgba(234,179,8,0.25)] hover:shadow-[0_0_45px_rgba(234,179,8,0.45)] transition">
-            Request a Quote
+    <section id="book" className="relative overflow-hidden bg-[#0b0b0e] py-20">
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-yellow-500/5 via-transparent to-yellow-500/5" />
+      <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <span className="bg-gradient-to-br from-amber-200 via-yellow-300 to-amber-400 bg-clip-text text-transparent">Reserve Your Chauffeur</span>
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-white/75">
+          Tell us your pickup, destination, and schedule. We’ll confirm promptly and handle the rest.
+        </p>
+        <form className="mx-auto mt-10 grid max-w-3xl gap-4 sm:grid-cols-2">
+          <input type="text" placeholder="Pickup Location" className="w-full rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-white/50 outline-none ring-amber-300/0 transition focus:ring-2" />
+          <input type="text" placeholder="Destination" className="w-full rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-white/50 outline-none ring-amber-300/0 transition focus:ring-2" />
+          <input type="datetime-local" className="w-full rounded-md border border-white/10 bg-white/5 px-4 py-3 text-white outline-none ring-amber-300/0 transition focus:ring-2 sm:col-span-2" />
+          <button type="button" className="rounded-md bg-gradient-to-br from-amber-300 to-yellow-500 px-6 py-3 font-semibold text-black shadow-[0_10px_30px_-10px_rgba(251,191,36,0.85)] transition hover:brightness-110 sm:col-span-2">
+            Book Your Ride
           </button>
-        </motion.form>
+        </form>
       </div>
     </section>
   );
