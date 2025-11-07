@@ -1,18 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Spline from '@splinetool/react-spline';
 
 export default function Hero() {
   return (
     <section className="relative isolate flex min-h-[90vh] items-center overflow-hidden bg-[#0b0b0e] pt-16">
-      {/* GIF Background Cover */}
+      {/* Spline Background Cover */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://cdn.eightlabs.ca/cdn/Hailuo_Video_A-sleek-black-Cadillac-SUV-dri_4432988174745681971-ezgif.com-video-to-gif-converter.gif"
-          alt="Luxury black SUV driving through a tunnel"
-          className="h-full w-full object-cover"
-        />
+        <Spline scene="https://prod.spline.design/4Tf9WOIaWs6LOezG/scene.splinecode" style={{ width: '100%', height: '100%' }} />
         {/* Subtle dark gradient for contrast – non-blocking */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/80" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />
       </div>
 
       {/* Gold glow accents (non-interactive) */}

@@ -1,16 +1,20 @@
 import React from 'react';
-import { Car, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 
 export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/30 backdrop-blur supports-[backdrop-filter]:bg-black/30">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 to-yellow-500 text-black shadow-lg">
-            <Car className="h-5 w-5" />
-          </div>
+        <a href="#top" className="flex items-center gap-3">
+          <img
+            src="https://chauffeurduroi.com/assets/e39b3ae5-cff9-4ffd-963c-59fa1b204bf9_1759371059607-DL4VNu0t.png"
+            alt="Chauffeur Du Roi logo"
+            className="h-9 w-auto"
+            loading="eager"
+            decoding="async"
+          />
           <span className="font-semibold tracking-wide text-white">Chauffeur Du Roi</span>
-        </div>
+        </a>
         <nav className="hidden items-center gap-6 md:flex">
           <a href="#services" className="text-sm text-white/80 transition hover:text-white">Services</a>
           <a href="#fleet" className="text-sm text-white/80 transition hover:text-white">Fleet</a>
